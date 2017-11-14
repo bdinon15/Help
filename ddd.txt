@@ -1,0 +1,26 @@
+Public Class Form1
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles rb_1.CheckedChanged
+
+    End Sub
+
+    Private Sub calc_btn_Click(sender As Object, e As EventArgs) Handles calc_btn.Click
+        Const year1 As Single = 15
+        Const year2 As Single = 25
+        Const year3 As Single = 30
+        Const interest As Single = 1 * 0.8 '20% int rat
+
+        If rb_1.Checked Then
+            answer.Text = (Val(tb_loan.Text * year1) + interest)
+        ElseIf rb_2.Checked Then
+            answer.Text = (Val(tb_loan.Text * year2) + interest)
+        ElseIf rb_3.Checked Then
+            answer.Text = (Val(tb_loan.Text * year3) + interest)
+        End If
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        answer.Text = String.Empty
+        tb_loan.Text = String.Empty
+    End Sub
+End Class

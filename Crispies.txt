@@ -1,0 +1,33 @@
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles calc_btn.Click
+        TB_final.Visible = True
+        Label4.Visible = True
+        Const bagelsTotal As Double = 0.99
+        Const donutsTotal As Double = 0.75
+        Const coffeeTotal As Double = 1.2
+        Dim salesTax As Double
+        Dim totalPrice As Double
+
+        Double.TryParse(TB_bagels.Text, bagelsTotal)
+        Double.TryParse(TB_donuts.Text, donutsTotal)
+        Double.TryParse(TB_Coffee.Text, coffeeTotal)
+
+        totalPrice = (Val(TB_bagels.Text * bagelsTotal) + (TB_donuts.Text * donutsTotal) + (TB_Coffee.Text * coffeeTotal))
+        salesTax = (Val(totalPrice * 0.06))
+        TB_final.Text = (Val(salesTax + totalPrice))
+        TB_final.Text = Format(TB_final.Text, "Currency")
+    End Sub
+
+    Private Sub exit_btn_Click(sender As Object, e As EventArgs) Handles exit_btn.Click
+        Me.Close()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        TB_bagels.Text = String.Empty
+        TB_donuts.Text = String.Empty
+        TB_Coffee.Text = String.Empty
+        TB_final.Text = String.Empty
+        TB_final.Visible = False
+        Label4.Visible = False
+    End Sub
+End Class

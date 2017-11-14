@@ -1,0 +1,21 @@
+2) Dim nameofPerson As String
+Dim height As Decimal
+Dim weight As Integer
+Dim isconverted> As Boolean
+
+5) Dim strEmployee As String
+    Const intAge As Integer = 34
+    Const dblPayRate As Double = 15.99
+
+10)  Dim dblExpenses, dblNet, dblIncome As Double
+     dblNet.text = dblIncome - dblExpenses
+
+8) lblMsg.Text = "They Live in" & strCity & ", " & strState & "." 
+
+9) lblMsg.Text = "My name is " & strFirst & strMiddle & strLast & ", but you can call me "  & strNickname & "."
+
+10) Not too sure what it's really asking - don't have the files they named. 
+
+
+
+ 
